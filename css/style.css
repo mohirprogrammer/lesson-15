@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    border-style: border-box;
+}
+
+:root {
+    --aside-w: 225px;
+    --header-h: 80px;
+    --footer-h: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+aside {
+    position: fixed;
+    height: 100vh;
+    width: var(--aside-w);
+    background-color: #363740;
+    overflow: auto;
+}
+
+.aside-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A4A6B3;
+    margin-top: 21px;
+    margin-bottom: 81px;
+}
+
+.aside-div h1 {
+    /* margin-left: 18px; */
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside-link {
+    display: flex;
+    /* margin-left: 33px; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+    margin-bottom: 34px;
+    font-size: 16px;
+    color: #DDE2FF;
+    text-decoration: none;
+}
+
+.aside-link p {
+    margin-left: 27px;
+}
+
+hr {
+    color: #DFE0EB;
+}
+
+.aside-btn {
+    margin-top: 200px;
+    margin-left: 40px;
+}
+
+.aside-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: #A4A6B3;
+    margin-top: 28px;
+}
+
+.aside-btn button p {
+    margin-left: 18px;
+}
+
+.aside-btn button a {
+    color: #A4A6B3;
+}
+
+.switch {
+    appearance: none;
+    margin-left: 10px;
+    padding: 5px;
+    width: 45px;
+    height: 28px;
+    border-radius: 25px;
+    background-color: grey;
+  }
+  .switch::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .switch:checked::after {
+    margin-left: 15px;
+  }
+
+.close{
+    width: 75px ;
+    
+}
+
+
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-h);
+    /* background-color: red; */
+
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    margin-left: 19px;
+    cursor: pointer;
+}
+
+header * {
+    display: block;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-right: 19px;
+    justify-content: right;
+}
+
+.name p {
+    margin-right: 14px;
+    color: #252733;
+}
+
+.name img {
+    border-radius: 50%;
+}
+
+header, main, footer {
+    position: fixed;
+    left: var(--aside-w);
+    width: calc(100% - var(--aside-w));
+}
+
+main {
+    position: fixed;
+    top: var(--header-h);
+    height: calc(100vh - var(--header-h));
+    /* background-color: aqua; */
+    overflow: auto;
+}
+
+.menu-haed {
+    margin-top: 50px;
+    margin-left: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    margin-right: 10px;
+}
+
+.menu-btn button   {
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    margin-left: 32px;
+    
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #10CD45;
+    border-color: #10CD45;
+}
+
+.menu-btn 
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: var(--footer-h);
+    background-color: blue;
+}
+
+.close ~ * {
+    --aside-w: 75px;
+    
+}
+
+.close .aside-div h1 {
+    display: none;
+    
+}
+
+.close .aside-link p {
+    display: none;
+}
+
+.close .aside-link img {
+    width: 30px;
+}
+
+.close .aside-btn {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.close .aside-btn p, span {
+    display: none;
+}
+
+.close .chang-img {
+    display: none;
+}
+
+.close .switch {
+    margin-left: -30px;
+    width: 60px;
+    height: 40px;
+}
+
+.close .switch::after {
+    width: 30px;
+    height: 30px;
+}
+
+.close .switch:checked::after {
+    margin-left: 20px;
+}
+
+.close .aside-btn img {
+    width: 30px;
+    margin-left: -20px;
+}
+
+.dark * {
+    color: #fff;
+    background-color: black !important;
+}
+
+.dark footer {
+    background-color: black;
+}
+
+.dark .switch::after {
+    background-color: #fff;
+}
+
+.dark ~  button {
+    background-color: #fff;
+}
+
+table {
+    margin-top: 70px;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table thead {
+    color: #878787;
+}
+
+table tbody {
+    background-color: #EEF2F5;
+}
+
+.dark table {
+    border: 1px solid white;
+}
+
+.dark html {
+    background-color: black;
+}
